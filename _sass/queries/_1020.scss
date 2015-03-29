@@ -1,0 +1,35 @@
+$base-font-size: 1rem;
+
+html {
+  font-size: $base-font-size;
+}
+
+.full {
+  width: columns(12);
+}
+
+.three-quarters {
+  width: columns(9);
+}
+
+.half {
+  width: columns(6);
+}
+
+.third {
+  width: columns(4);
+}
+
+.quarter {
+  width: columns(3);
+}
+
+.work__item-wrap {
+  padding-bottom: 40%;
+  height: 0;
+  position:relative;
+}
+
+.work {
+  padding: 0 1.25rem;
+}

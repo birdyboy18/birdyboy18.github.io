@@ -1,0 +1,555 @@
+//base styles for everything that isn't width specific
+/*================================
+GENERAL SETTINGS
+=================================*/
+
+$base-font-family: "Droid Sans", sans-serif;
+$container_max_width: 1020px;
+
+/*================================
+COLOURS
+=================================*/
+
+$orange: #FF7373;
+$d_orange: #F35656;
+$d_grey: #333333;
+$grey: #666666;
+$l_grey: #9B9B9B;
+$purple: #B92E60;
+$green: #7ED321;
+$l_green: #D1E685;
+
+/*================================
+TYPOGRAPHIC SETTINGS
+=================================*/
+
+$base-font-size: .875rem;
+$base-line-height: 1.5rem;
+$measure: 760px; //47.5rem
+
+$h1-font-size: 1rem*1.5*1.5*1.5; //3.375rem
+$h1-line: 1.5rem;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 1rem*1.5*1.5;
+$h2-line: 1.5rem;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 1rem*1.5;
+$h3-line: 1.5rem;
+$h3-lines: 1.5;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 1rem;
+$h4-line: 1.5rem;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+/*================================
+TINY RESET
+=================================*/
+
+* {
+  @include border-box();
+}
+
+html, body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+html {
+  padding: 20px;
+  overflow: hidden;
+  position:fixed;
+  background: #f7f7f7;
+}
+
+body {
+  font-family: $base-font-family;
+  background: #fff;
+  overflow: scroll;
+}
+
+/*================================
+TYPOGRAPHY
+=================================*/
+
+.h1,.h2,.h3,.h4 {
+  font-weight: 400;
+}
+
+.h1 {
+  padding: 0 0 0 0;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: $h1-margin-top 0 $h1-margin-bottom 0;
+}
+
+.h2 {
+  padding: 0 0 0 0;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: $h2-margin-top 0 $h2-margin-bottom 0;
+}
+
+.h3 {
+  padding: 0 0 0 0;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin: $h3-margin-top 0 $h3-margin-bottom 0;
+}
+
+.h4 {
+  padding: 0 0 0 0;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+}
+
+p, ul {
+  padding: 0 0 0 0;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color:$orange;
+
+  &:hover {
+    border-bottom: 1px solid $orange;
+  }
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  width: auto;
+  height:auto;
+}
+
+/*================================
+SIZE PRIMITIVES & BLOCKS
+=================================*/
+
+.container {
+  width: 100%;
+  max-width: $container_max_width;
+  margin: 0 auto 0 auto;
+  padding: 0 1.25rem;
+  @include clearfix();
+}
+
+.container--padded {
+  padding: 3.125rem 1.25rem;
+}
+
+.container--padded-top {
+  padding: 3.125rem 0 0 0;
+}
+
+.container--padded-bottom {
+  padding: 0 0 3.125rem 0;
+}
+
+.container--pushed {
+  margin: 3.125rem auto;
+}
+
+.container--pushed-top {
+  margin: 3.125rem auto 0 auto;
+}
+
+.push-down {
+  margin: 0 auto 1.5rem auto;
+}
+
+.full {
+  width: columns(12);
+}
+
+.half {
+  width: columns(12);
+}
+
+.third {
+  width: columns(12);
+}
+
+.quarter {
+  width: columns(12);
+}
+
+//Used to contain images
+.media-holder {
+  text-align:center;
+}
+
+img, iframe {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*================================
+LAYOUT HELPERS
+=================================*/
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.push-down {
+  margin-top: 6.25rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+/*================================
+TEXT MODIFIERS
+=================================*/
+
+.text--white {
+  color:#fff;
+}
+
+.text--d_grey {
+  color: $d_grey;
+}
+
+.text--grey {
+  color: $grey;
+}
+
+.text--l_grey {
+  color: $l_grey;
+}
+
+.text--no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.text--no-top-margin {
+  margin-top: 0;
+}
+
+//anchor styles based on colour
+.underline--white {
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.underline--grey {
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $grey;
+  }
+}
+/*================================
+BACKGROUND MODIFIERS
+=================================*/
+
+.background--orange {
+  background:$orange;
+}
+
+.background--grey {
+  background: $grey;
+}
+
+.background--purple {
+  background: $purple;
+}
+
+.background--green {
+  background: $green;
+}
+
+.background--l_green {
+  background: $l_green;
+}
+
+.background--cream {
+  background: #FDFCEA;
+}
+
+/*================================
+BUTTONS
+=================================*/
+
+.btn {
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.btn--orange {
+  background: $orange;
+  color: #fff;
+  font-weight: 700;
+  border: 2px solid $orange;
+  @include transition(all 0.3s);
+
+  &:hover {
+    border: 2px solid $d_orange;
+    background: $d_orange;
+  }
+}
+
+.btn--push-left {
+  margin-left: 1.25rem;
+}
+
+.btn--outline-white {
+  border: 2px solid #fff;
+  color:#fff;
+  padding: 10px 15px;
+  @include transition(all 0.3s);
+
+  &:hover {
+    background: #fff;
+    color: $grey;
+    border: 2px solid #fff;
+  }
+}
+
+.btn--outline-grey {
+  border: 2px solid $grey;
+  color: $grey;
+  padding: 10px 15px;
+  @include transition(all 0.3s);
+
+  &:hover {
+    background: $grey;
+    color:#fff;
+    border: 2px solid $grey;
+  }
+}
+
+.btn--outline-orange {
+  border: 2px solid $orange;
+  color: $orange;
+  padding: 10px 20px;
+  @include transition(all 0.3s);
+
+  &:hover {
+    background: $orange;
+    color: #fff;
+    border: 2px solid $orange;
+  }
+}
+
+/*================================
+LOGOS
+=================================*/
+
+.logo--240 {
+  width: 240px;
+}
+
+.logo--190 {
+  width: 190px;
+}
+
+.logo--90 {
+  width: 90px;
+}
+
+/*================================
+MAIN STYLES
+=================================*/
+
+/*--------Header Styles----------*/
+
+.header {
+  @include clearfix();
+  padding: 1.25rem 0;
+  z-index: 10;
+}
+
+.logo {
+  margin-top:.9rem;
+  position: relative;
+  top:0;
+  @include transition(all 0.3s);
+
+  &:hover {
+    top: -5px;
+  }
+
+  a {
+    &:hover {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+nav {
+  padding: 1.25rem 0;
+  ul {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+
+      a {
+        display: inline-block;
+        padding: 15px 20px;
+        color: $grey;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.social-links {
+  a {
+    color: $l_grey;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.employment-status {
+  padding-top: 1.5rem;
+  p {
+    color:$l_grey;
+    font-size: 1.5rem;
+    span {
+      color: $grey;
+    }
+  }
+}
+
+/*--------Work Styles----------*/
+
+.work {
+  @include clearfix();
+}
+
+.work__item-wrap {
+  height: 450px;
+  position:relative;
+}
+
+.work__item {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+.work__type {
+  padding: 1.25rem 0 0 1.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.work__type--white {
+  color:rgba(255,255,255,0.6);
+}
+
+.work__type--grey {
+  color:rgba(0,0,0,0.4);
+}
+
+.work__client {
+  width: columns(9);
+  margin: 80px auto 40px auto;
+}
+
+.work__roles {
+  p {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+}
+
+.bordered-top {
+  border-top: 2px solid #f7f7f7;
+}
+
+.list {
+  padding: 0 0 0 0;
+  margin: 0 0 1.5rem 0;
+
+    li {
+      list-style: none;
+      padding: 5px 0;
+
+      a {
+        color: $grey;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+.content {
+  max-width: 640px;
+  color:$grey;
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5em;
+  }
+}
+
+.caption {
+  font-size: .875rem !important;
+  margin-top: 0;
+  color: $l_grey;
+}

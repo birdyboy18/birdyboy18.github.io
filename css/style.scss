@@ -1,0 +1,20 @@
+---
+sass:
+  sass_dir: _sass
+---
+@import 'defaults.scss';
+@import 'queries/base.scss';
+
+@media screen and (min-width: 600px) {
+  @import 'queries/600.scss';
+}
+
+@media screen and (min-width: 1020px) {
+  @import 'queries/1020.scss';
+}
+
+@media screen and (min-width: 1280px) {
+  @import 'queries/1280.scss';
+}
+
+@import 'syntax-highlighting.scss';
