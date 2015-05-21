@@ -18,6 +18,7 @@ $l_grey: #9B9B9B;
 $purple: #B92E60;
 $green: #7ED321;
 $l_green: #D1E685;
+$braid-green: #5AC7AA;
 
 /*================================
 TYPOGRAPHIC SETTINGS
@@ -316,6 +317,10 @@ BACKGROUND MODIFIERS
   background: #FDFCEA;
 }
 
+.background--braid-green {
+  background: $braid-green;
+}
+
 /*================================
 BUTTONS
 =================================*/
@@ -507,6 +512,15 @@ nav {
 .work__client {
   width: columns(9);
   margin: 80px auto 40px auto;
+}
+
+.work__actions {
+  @include clearfix();
+}
+
+.work__actions--constrained {
+  width: columns(6);
+  margin: 0 auto 0 auto;
 }
 
 .work__roles {
