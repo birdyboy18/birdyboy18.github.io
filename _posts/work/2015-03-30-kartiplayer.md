@@ -24,7 +24,7 @@ permalink: /work/kartiplayer
 
 <p>This hack was made while attending <a href="http://hacksoton.com/">hack soton</a> an event in southampton where like-minded developers can spend a day hacking those projects they don't quite get time to spend on. All while being fed and watered with food and beer.</p>
 
-<p>At this event I met up with <a href="http://www.twitter.com/bhawkes">Brandon</a> another developer who was year above on my course and who I worked with at the last hack soton event to make something called <a href="http://github.com/birdyboy18/QWOPtiplayer">QWOPtiplayer</a>. For a better read up on it, then please <a href="http://sean.mtracey.org/post/hacksoton-3">read this write up of it</a>, provided by <a href="http://twitter.com/seanmtracey">Sean Tracey</a> another developer we worked with on <a href="https://github.com/birdyboy18/QWOPtiplayer">QWOPtiplayer</a>. However I will also touch on it in the next section.</p>
+<p>At this event I met up with <a href="http://www.twitter.com/brandonhawkes">Brandon</a> another developer who was year above on my course and who I worked with at the last hack soton event to make something called <a href="http://github.com/birdyboy18/QWOPtiplayer">QWOPtiplayer</a>. For a better read up on it, then please <a href="http://sean.mtracey.org/post/hacksoton-3">read this write up of it</a>, provided by <a href="http://twitter.com/seanmtracey">Sean Tracey</a> another developer we worked with on <a href="https://github.com/birdyboy18/QWOPtiplayer">QWOPtiplayer</a>. However I will also touch on it in the next section.</p>
 
 <h3 class="h3">What is KARTiplayer?</h3>
 
@@ -40,7 +40,7 @@ permalink: /work/kartiplayer
 
 <p>With that data being sent back to all of the clients, it was also my job to take that data and reflect that on the front-end. I did this by making it so that when you tilted the phone a block would move up indicating which choice everyone was currently picking. It would also only work if a certain threshold was passed. If everyone didn't overall pick a choice it would remain neutral.</p>
 
-<h3 class="h3">What about Brendan?</h3>
+<h3 class="h3">What about Brandon?</h3>
 
 <p>While I was doing this Brendan though it'd be cool if we could take the computer that was running both the server and the game to see if it could capture part of the screen and then send that over too. This was so we had an actual item displayed on our phone when we could use it.</p>
 
